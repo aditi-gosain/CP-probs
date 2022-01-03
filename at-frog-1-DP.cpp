@@ -26,8 +26,6 @@ int32_t main()
     dp.resize(n);
     for (int i = 0; i < n; i++)
         cin >> h[i];
-    for (int i = 0; i < n; i++)
-        dp[i] = -1;
     dp[0] = 0;
     dp[1] = abs(h[1] - h[0]);
     for (int i = 2; i < n; i++)
