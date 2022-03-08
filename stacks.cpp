@@ -31,7 +31,7 @@ int32_t main()
             cin >> a[i];
         for (int i = 0; i < n; i++)
         {
-            while (!s.empty() && s.top() > a[i])
+            while (!s.empty() && s.top() >= a[i])
             {
                 s.pop();
             }
@@ -75,7 +75,7 @@ int32_t main()
             cin >> a[i];
         for (int i = 0; i < n; i++)
         {
-            while (!s.empty() && a[i] > s.top())
+            while (!s.empty() && a[i] >= s.top())
                 s.pop();
             if (!s.empty() && s.top() > a[i])
                 cout << s.top() << " ";
@@ -119,7 +119,7 @@ int32_t main()
             cin >> a[i];
         for (int i = n - 1; i >= 0; i--)
         {
-            while (!s.empty() && s.top() > a[i])
+            while (!s.empty() && s.top() >= a[i])
                 s.pop();
             if (!s.empty() && a[i] > s.top())
                 ans[i] = s.top();
@@ -133,6 +133,7 @@ int32_t main()
 }
 
 //Nearest Greater Element on Right
+
 #include <bits/stdc++.h>
 #define fastio                        \
     ios_base::sync_with_stdio(false); \
@@ -163,7 +164,7 @@ int32_t main()
             cin >> a[i];
         for (int i = n - 1; i >= 0; i--)
         {
-            while (!s.empty() && s.top() < a[i])
+            while (!s.empty() && s.top() <= a[i])
                 s.pop();
             if (!s.empty() && a[i] < s.top())
                 ans[i] = s.top();
